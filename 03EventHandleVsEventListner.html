@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <button onclick="testing()">Click</button>
+
+    <button onclick="decrement()">-</button>
+    <button id="increse">+</button>
+
+
+
+    <div class="bi aw bj bk bl bm">
+        <div>
+            <h1 id="703a"
+                class="pw-post-title nd hy ne bu nf ng nh ni nj nk nl nm nn no np nq nr ns nt nu nv nw nx ny nz oa bx"
+                data-testid="storyTitle" data-selectable-paragraph="">What’s the Difference between Event Handlers &amp;
+                addEventListener in JavaScript?</h1>
+        </div>
+        <figure class="by bz lx ly lz sa rx ry paragraph-image">
+            <div role="button" tabindex="0" class="sb sc ea sd aw se">
+                <div class="rx ry rz">
+                    <picture>
+                        <source srcset="https://miro.medium.com/v2/resize:fit:640/format:webp/1*uUn5t6NyhX_Z2PgfuxwKCA.png 640w, https://miro.medium.com/v2/resize:fit:720/format:webp/1*uUn5t6NyhX_Z2PgfuxwKCA.png 720w, https://miro.medium.com/v2/resize:fit:750/format:webp/1*uUn5t6NyhX_Z2PgfuxwKCA.png 750w, https://miro.medium.com/v2/resize:fit:786/format:webp/1*uUn5t6NyhX_Z2PgfuxwKCA.png 786w, https://miro.medium.com/v2/resize:fit:828/format:webp/1*uUn5t6NyhX_Z2PgfuxwKCA.png 828w, https://miro.medium.com/v2/resize:fit:1100/format:webp/1*uUn5t6NyhX_Z2PgfuxwKCA.png 1100w, https://miro.medium.com/v2/resize:fit:1400/format:webp/1*uUn5t6NyhX_Z2PgfuxwKCA.png 1400w" sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px" type="image/webp">
+                        <source data-testid="og"
+                            srcset="https://miro.medium.com/v2/resize:fit:640/1*uUn5t6NyhX_Z2PgfuxwKCA.png 640w, https://miro.medium.com/v2/resize:fit:720/1*uUn5t6NyhX_Z2PgfuxwKCA.png 720w, https://miro.medium.com/v2/resize:fit:750/1*uUn5t6NyhX_Z2PgfuxwKCA.png 750w, https://miro.medium.com/v2/resize:fit:786/1*uUn5t6NyhX_Z2PgfuxwKCA.png 786w, https://miro.medium.com/v2/resize:fit:828/1*uUn5t6NyhX_Z2PgfuxwKCA.png 828w, https://miro.medium.com/v2/resize:fit:1100/1*uUn5t6NyhX_Z2PgfuxwKCA.png 1100w, https://miro.medium.com/v2/resize:fit:1400/1*uUn5t6NyhX_Z2PgfuxwKCA.png 1400w"
+                            sizes="(min-resolution: 4dppx) and (max-width: 700px) 50vw, (-webkit-min-device-pixel-ratio: 4) and (max-width: 700px) 50vw, (min-resolution: 3dppx) and (max-width: 700px) 67vw, (-webkit-min-device-pixel-ratio: 3) and (max-width: 700px) 65vw, (min-resolution: 2.5dppx) and (max-width: 700px) 80vw, (-webkit-min-device-pixel-ratio: 2.5) and (max-width: 700px) 80vw, (min-resolution: 2dppx) and (max-width: 700px) 100vw, (-webkit-min-device-pixel-ratio: 2) and (max-width: 700px) 100vw, 700px">
+                        <img alt="" class="aw rf sf c" width="700" height="368" loading="eager" role="presentation"
+                            src="https://miro.medium.com/v2/resize:fit:875/1*uUn5t6NyhX_Z2PgfuxwKCA.png">
+                    </picture>
+                </div>
+            </div>
+        </figure>
+        <p id="144f"
+            class="pw-post-body-paragraph sg sh ne si b sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td mz bx"
+            data-selectable-paragraph="">JavaScript is the powerhouse behind the interactivity of modern web pages. One
+            of its fundamental features is handling events, which allow your web applications to respond to user
+            interactions like clicks, keypresses, and mouse movements.</p>
+        <p id="bf69"
+            class="pw-post-body-paragraph sg sh ne si b sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td mz bx"
+            data-selectable-paragraph="">Two common ways to handle events in JavaScript are through event handlers and
+            the addEventListener method.</p>
+        <h1 id="3795" class="te tf ne bu mb tg th ti tj tk tl tm tn to tp tq tr ts tt tu tv tw tx ty tz ua bx"
+            data-selectable-paragraph="">Event Handlers: The Classic Approach</h1>
+        <p id="99d7"
+            class="pw-post-body-paragraph sg sh ne si b sj ub sl sm sn uc sp sq sr ud st su sv ue sx sy sz uf tb tc td mz bx"
+            data-selectable-paragraph="">Imagine you have a button in your web page, and you want something to happen
+            when a user clicks on it.</p>
+        <p id="23b2"
+            class="pw-post-body-paragraph sg sh ne si b sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td mz bx"
+            data-selectable-paragraph="">Here’s how you can do it using an event handler:</p>
+        <pre
+            class="ug uh ui uj uk ul um hi gc hk jf bx"><span id="35e4" class="un tf ne um b cx uo up l uq ur" data-selectable-paragraph=""><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myButton"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="hljs-undefined"><br>  // Get the button element by its ID<br>  const button = document.getElementById('myButton');<br><br>  // Define a function to run when the button is clicked<br>  function handleClick() {<br>    alert('Button clicked!');<br>  }<br><br>  // Attach the function to the button's click event<br>  button.onclick = handleClick;<br></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></pre>
+        <p id="bc6b"
+            class="pw-post-body-paragraph sg sh ne si b sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td mz bx"
+            data-selectable-paragraph="">In this example:</p>
+        <ol class="">
+            <li id="9d92"
+                class="sg sh ne si b sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td us ut uu bx"
+                data-selectable-paragraph="">We select the button element using <code
+                    class="ci uv uw ux um b">getElementById</code>.</li>
+            <li id="45b1"
+                class="sg sh ne si b sj uy sl sm sn uz sp sq sr va st su sv vb sx sy sz vc tb tc td us ut uu bx"
+                data-selectable-paragraph="">We create a function called <code
+                    class="ci uv uw ux um b">handleClick</code>, which will be executed when the button is clicked. In
+                this case, it shows an alert.</li>
+            <li id="ec12"
+                class="sg sh ne si b sj uy sl sm sn uz sp sq sr va st su sv vb sx sy sz vc tb tc td us ut uu bx"
+                data-selectable-paragraph="">We assign the <code class="ci uv uw ux um b">handleClick</code> function to
+                the button's <code class="ci uv uw ux um b">onclick</code> property. This is the event handler in
+                action. When the button is clicked, the <code class="ci uv uw ux um b">handleClick</code> function gets
+                called.</li>
+        </ol>
+        <h1 id="07e4" class="te tf ne bu mb tg th ti tj tk tl tm tn to tp tq tr ts tt tu tv tw tx ty tz ua bx"
+            data-selectable-paragraph="">addEventListener: The Modern Approach</h1>
+        <p id="380c"
+            class="pw-post-body-paragraph sg sh ne si b sj ub sl sm sn uc sp sq sr ud st su sv ue sx sy sz uf tb tc td mz bx"
+            data-selectable-paragraph="">While event handlers work well, they have some limitations, especially when you
+            want to attach multiple functions to the same event.</p>
+        <p id="fde4"
+            class="pw-post-body-paragraph sg sh ne si b sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td mz bx"
+            data-selectable-paragraph="">This is where the addEventListener method shines:</p>
+        <pre
+            class="ug uh ui uj uk ul um hi gc hk jf bx"><span id="cdce" class="un tf ne um b cx uo up l uq ur" data-selectable-paragraph=""><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myButton"</span>&gt;</span>Click me!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="hljs-undefined"><br>  // Get the button element by its ID<br>  const button = document.getElementById('myButton');<br><br>  // Define the first function to run when the button is clicked<br>  function firstFunction() {<br>    alert('First function');<br>  }<br><br>  // Define the second function to run when the button is clicked<br>  function secondFunction() {<br>    alert('Second function');<br>  }<br><br>  // Use addEventListener to attach the functions to the button's click event<br>  button.addEventListener('click', firstFunction);<br>  button.addEventListener('click', secondFunction);<br></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></pre>
+        <p id="3189"
+            class="pw-post-body-paragraph sg sh ne si b sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td mz bx"
+            data-selectable-paragraph="">In this example:</p>
+        <ol class="">
+            <li id="d8fa"
+                class="sg sh ne si b sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td us ut uu bx"
+                data-selectable-paragraph="">We select the button element as before.</li>
+            <li id="0d27"
+                class="sg sh ne si b sj uy sl sm sn uz sp sq sr va st su sv vb sx sy sz vc tb tc td us ut uu bx"
+                data-selectable-paragraph="">We define two functions, <code
+                    class="ci uv uw ux um b">firstFunction</code> and <code
+                    class="ci uv uw ux um b">secondFunction</code>, to run when the button is clicked.</li>
+            <li id="f10c"
+                class="sg sh ne si b sj uy sl sm sn uz sp sq sr va st su sv vb sx sy sz vc tb tc td us ut uu bx"
+                data-selectable-paragraph="">We use <code class="ci uv uw ux um b">addEventListener</code> to attach
+                both functions to the button's <code class="ci uv uw ux um b">click</code> event. Now, when the button
+                is clicked, both functions are executed in the order they were added.</li>
+        </ol>
+        <h1 id="f5b7" class="te tf ne bu mb tg th ti tj tk tl tm tn to tp tq tr ts tt tu tv tw tx ty tz ua bx"
+            data-selectable-paragraph="">Key Differences</h1>
+        <p id="4c2a"
+            class="pw-post-body-paragraph sg sh ne si b sj ub sl sm sn uc sp sq sr ud st su sv ue sx sy sz uf tb tc td mz bx"
+            data-selectable-paragraph="">Now, let’s clarify the main differences between event handlers and <code
+                class="ci uv uw ux um b">addEventListener</code>:</p>
+        <h1 id="dd15" class="te tf ne bu mb tg th ti tj tk tl tm tn to tp tq tr ts tt tu tv tw tx ty tz ua bx"
+            data-selectable-paragraph="">1. Multiple Event Listeners</h1>
+        <ul class="">
+            <li id="8355"
+                class="sg sh ne si b sj ub sl sm sn uc sp sq sr ud st su sv ue sx sy sz uf tb tc td vd ut uu bx"
+                data-selectable-paragraph=""><strong class="si nf">Event Handlers: </strong>You can only attach one
+                event handler per event type to an element. If you assign a new function to an event handler, it
+                replaces the previous one.</li>
+            <li id="bb7a"
+                class="sg sh ne si b sj uy sl sm sn uz sp sq sr va st su sv vb sx sy sz vc tb tc td vd ut uu bx"
+                data-selectable-paragraph=""><strong class="si nf">addEventListener: </strong>You can attach multiple
+                event listeners to the same event type on an element. They will all be executed in the order they were
+                added.</li>
+        </ul>
+        <h1 id="071b" class="te tf ne bu mb tg th ti tj tk tl tm tn to tp tq tr ts tt tu tv tw tx ty tz ua bx"
+            data-selectable-paragraph="">2. Clearer Separation of Concerns</h1>
+        <ul class="">
+            <li id="eb45"
+                class="sg sh ne si b sj ub sl sm sn uc sp sq sr ud st su sv ue sx sy sz uf tb tc td vd ut uu bx"
+                data-selectable-paragraph=""><strong class="si nf">Event Handlers:</strong> Functions and event handling
+                logic are mixed together, which can make your code less organized as your project grows.</li>
+            <li id="e34e"
+                class="sg sh ne si b sj uy sl sm sn uz sp sq sr va st su sv vb sx sy sz vc tb tc td vd ut uu bx"
+                data-selectable-paragraph=""><strong class="si nf">addEventListener:</strong> Promotes a cleaner
+                separation of concerns by allowing you to define event handling logic separately from the element and
+                event type.</li>
+        </ul>
+        <h1 id="16de" class="te tf ne bu mb tg th ti tj tk tl tm tn to tp tq tr ts tt tu tv tw tx ty tz ua bx"
+            data-selectable-paragraph="">3. Removing Event Listeners</h1>
+        <ul class="">
+            <li id="ed6e"
+                class="sg sh ne si b sj ub sl sm sn uc sp sq sr ud st su sv ue sx sy sz uf tb tc td vd ut uu bx"
+                data-selectable-paragraph=""><strong class="si nf">Event Handlers: </strong>Removing event handlers can
+                be tricky and may require setting the event handler to <code class="ci uv uw ux um b">null</code>.</li>
+            <li id="c4fd"
+                class="sg sh ne si b sj uy sl sm sn uz sp sq sr va st su sv vb sx sy sz vc tb tc td vd ut uu bx"
+                data-selectable-paragraph=""><strong class="si nf">addEventListener:</strong> Provides a straightforward
+                method, <code class="ci uv uw ux um b">removeEventListener</code>, to remove specific event listeners
+                when they are no longer needed.</li>
+        </ul>
+        <h1 id="e336" class="te tf ne bu mb tg th ti tj tk tl tm tn to tp tq tr ts tt tu tv tw tx ty tz ua bx"
+            data-selectable-paragraph="">Conclusion</h1>
+        <p id="d0a2"
+            class="pw-post-body-paragraph sg sh ne si b sj ub sl sm sn uc sp sq sr ud st su sv ue sx sy sz uf tb tc td mz bx"
+            data-selectable-paragraph="">Both event handlers and <code class="ci uv uw ux um b">addEventListener</code>
+            have their places in JavaScript, and choosing between them depends on your specific use case.</p>
+        <p id="de20"
+            class="pw-post-body-paragraph sg sh ne si b sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td mz bx"
+            data-selectable-paragraph="">If you need a simple solution and only one function to handle an event, event
+            handlers work fine.</p>
+        <p id="18ee"
+            class="pw-post-body-paragraph sg sh ne si b sj sk sl sm sn so sp sq sr ss st su sv sw sx sy sz ta tb tc td mz bx"
+            data-selectable-paragraph="">However, if you require more complex interactions, multiple event listeners, or
+            a cleaner code structure, <code class="ci uv uw ux um b">addEventListener</code> is the modern choice that
+            gives you greater flexibility and control over your event handling.</p>
+    </div>
+
+
+
+
+
+
+    <h1>Event Handlers vs Event Listeners in JavaScript</h1>
+
+    <h2>1. Event Handlers (e.g., <code>onclick</code>)</h2>
+    <p>An <strong>event handler</strong> is typically assigned directly to an element's event property, such as <code>onclick</code>, <code>onmouseover</code>, etc.</p>
+    
+    <h3>Example:</h3>
+    <pre class="code">
+const button = document.getElementById("myButton");
+button.onclick = function() {
+    alert("Button clicked!");
+};
+    </pre>
+    
+    <h3>Characteristics:</h3>
+    <ul>
+        <li><strong>Single handler</strong>: Only one function can be assigned to an event property (e.g., <code>onclick</code>). If you assign another function to the same property, it will overwrite the previous one.</li>
+        <li><strong>Simple syntax</strong>: It's easy to use for quick, straightforward event handling.</li>
+    </ul>
+    
+    <h3>Limitations:</h3>
+    <ul>
+        <li><strong>Overwrites previous handlers</strong>: Assigning a new function to the event property will overwrite any existing handler.</li>
+        <li><strong>Less flexible</strong>: You can't add multiple handlers for the same event type on the same element using event properties.</li>
+    </ul>
+
+    <h2>2. Event Listeners (e.g., <code>addEventListener</code>)</h2>
+    <p>An <strong>event listener</strong> is added to an element using the <code>addEventListener</code> method, allowing multiple listeners for the same event.</p>
+
+    <h3>Example:</h3>
+    <pre class="code">
+const button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+    alert("Button clicked!");
+});
+    </pre>
+
+    <h3>Characteristics:</h3>
+    <ul>
+        <li><strong>Multiple listeners</strong>: You can add multiple event listeners for the same event on a single element, and they won't interfere with each other.</li>
+        <li><strong>Control over event behavior</strong>: With <code>addEventListener</code>, you can specify options like capturing, bubbling, and whether the listener should be passive or once-only.</li>
+    </ul>
+
+    <h3>More Flexible:</h3>
+    <ul>
+        <li><strong>Event capturing and bubbling</strong>: You can control the event propagation phases (capturing or bubbling) using the third parameter in <code>addEventListener</code>.</li>
+        <li><strong>Non-overriding</strong>: <code>addEventListener</code> allows multiple functions to respond to the same event without overwriting each other.</li>
+    </ul>
+
+    <h2>When to Use Event Handlers vs. Event Listeners</h2>
+    <ul>
+        <li><strong>Use Event Handlers</strong> (e.g., <code>onclick</code>) when:
+            <ul>
+                <li>You only need a single action for a given event on an element.</li>
+                <li>You prefer simplicity or quick assignments (e.g., in small scripts).</li>
+            </ul>
+        </li>
+        <li><strong>Use Event Listeners</strong> (e.g., <code>addEventListener</code>) when:
+            <ul>
+                <li>You need to add multiple handlers for the same event type on the same element.</li>
+                <li>You want more control over the event (e.g., capturing, once-only execution, or passive behavior).</li>
+                <li>You are working in modern applications or frameworks where flexibility and scalability are key.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>While event handlers can be useful for simple tasks, <code>addEventListener</code> is generally more powerful and flexible, making it the preferred approach for handling events in most modern JavaScript applications. Its ability to support multiple listeners, prevent overwriting, and provide fine-grained control over event behavior makes it more versatile in complex scenarios.</p>
+
+    <script>
+        // alert("called")
+        // user definded function for debugging the val START
+        function testing() {
+            console.log("developer option for debug script");
+        }
+        // user definded function for debugging the val END
+        // testing()
+        var aval = 5
+        console.log("out side function", aval);
+
+
+        // UDF for eventHandler Example START
+        function decrement() {
+            let adata = 50
+            let aval = 505 + 5
+            asomething = 50
+            // val = val-1
+            // console.log(val);
+            console.log("Inside function", aval);
+        }
+        // UDF for eventHandler Example END
+
+
+        // console.log(document.getElementById("increse"))
+
+        // UDF for addEventListener Example START
+        document.getElementById("increse").addEventListener("click", function () {
+            console.log("called");
+
+        })
+        // UDF for addEventListener Example END
+
+
+
+        console.log("after function", aval);
+        aval++
+        console.log("after function incremenet", aval);
+        function increment() {
+            val = val + 1
+            console.log(val);
+        }
+    </script>
+</body>
+
+</html>

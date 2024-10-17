@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="custom.js" defer></script>
+    <!-- <script>
+        function checking() {
+            console.log("called checking");
+            document.getElementById("eventlist").style.color="orange"
+        }
+        // 02JavaScriptPreffredInFoot.html:12 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+        // console.log(document.getElementById("eventlist"));
+        // document.getElementById("eventlist").addEventListener("click",function () {
+        //     console.log("called eventlist");
+        //     document.getElementById("eventlist").style.color="orange"
+        // })
+        // document.body.style
+    </script> -->
+</head>
+<body>
+
+    <button onclick="checking()">Click</button>
+    <button id="eventlist">ClickEventList</button>
+    
+
+
+    
+    <script>
+        function checking() {
+            console.log("called checking");
+            // document.getElementById("eventlist").style.color="orange"
+        }
+        // 02JavaScriptPreffredInFoot.html:12 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+        // console.log(document.getElementById("eventlist"));
+        document.getElementById("eventlist").addEventListener("click",function () {
+            console.log("called eventlist");
+            document.getElementById("eventlist").style.color="orange"
+        })
+        // document.body.style
+    </script>
+</body>
+</html>
